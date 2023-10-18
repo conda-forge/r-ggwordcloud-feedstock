@@ -30,11 +30,13 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-rcpp
     - r-colorspace
     - r-ggplot2 >=3.0.0
+    - r-gridtext
     - r-png
     - r-scales >=1.0.0
   run:
@@ -43,6 +45,7 @@ requirements:
     - r-rcpp
     - r-colorspace
     - r-ggplot2 >=3.0.0
+    - r-gridtext
     - r-png
     - r-scales >=1.0.0
 
