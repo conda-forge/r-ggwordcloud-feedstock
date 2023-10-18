@@ -3,6 +3,7 @@ About r-ggwordcloud-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggwordcloud-feedstock/blob/main/LICENSE.txt)
 
+
 About r-ggwordcloud
 -------------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/lepennec/ggwordcloud, https://lepennec.github.io/ggword
 Package license: GPL-3.0-only
 
 Summary: Provides a word cloud text geom for 'ggplot2'. Texts are placed so that they do not overlap as in 'ggrepel'.  The algorithm used is a variation around the one of 'wordcloud2.js'.
+
 About r-ggwordcloud
 -------------------
 
