@@ -1,4 +1,4 @@
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggwordcloud_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggwordcloud/ggwordcloud_{{ version }}.tar.gz
-  sha256: b7bbbc02eff4f6519edc0e854b3bd4d9f9fc34e61ebc4e540869814ffdbe7db9
+  sha256: f2853304b355c9764079d469ef91c8f9f9ebf311dc0819961a3c76a76706857e
 
 build:
   merge_build_host: true  # [win]
@@ -22,7 +22,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
